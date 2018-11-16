@@ -1,4 +1,4 @@
-package com.yxhty.accessibilitydemo;
+package com.yxhty.accessibilityutil;
 
 import android.accessibilityservice.AccessibilityService;
 import android.accessibilityservice.AccessibilityServiceInfo;

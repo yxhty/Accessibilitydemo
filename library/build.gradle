@@ -1,22 +1,27 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "25.0.0"
+
+
+
     defaultConfig {
-        applicationId "com.xys.accessibilitydemo"
         minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 repositories{
@@ -26,9 +31,8 @@ repositories{
 }
 
 dependencies {
-    compile project(':library')
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    implementation(name:'libhs-1.0.6-release', ext: 'aar')
+    //implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly(name:'libhs-1.0.6-release', ext: 'aar')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })

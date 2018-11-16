@@ -2,6 +2,8 @@ package com.yxhty.accessibilitydemo;
 
 import android.view.accessibility.AccessibilityEvent;
 
+import com.yxhty.accessibilityutil.BaseAccessibilityService;
+
 
 /**
  * 自动打开微信扫一扫
